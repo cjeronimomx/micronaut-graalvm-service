@@ -71,16 +71,16 @@ Go to your prefer path and run:
 
 - Using the micronaut CLI
 ```bash
-mn create-app micronaut-graalvm-service --features graal-native-image
+mn create-app micronaut-graalvm-greetService --features graal-native-image
 
 ```
 
 - Using this git repository
 ```
-git clone https://github.com/cjeronimomx/micronaut-graalvm-service.git
+git clone https://github.com/cjeronimomx/micronaut-graalvm-greetService.git
 ``` 
 
-Then move you to micronaut-graalvm-service folder (cd micronaut-graalvm-service).
+Then move you to micronaut-graalvm-greetService folder (cd micronaut-graalvm-greetService).
 
 2.- **Building and running a Native image**
 ```bash
@@ -88,11 +88,11 @@ gradle assemble
 ```
 - Without Docker
 ```bash
-native-image --no-server -cp build/libs/micronaut-graalvm-service-0.1.jar
+native-image --no-server -cp build/libs/micronaut-graalvm-greetService-0.1.jar
 ./micornaut-graalvm-native
 ```
 - With Docker:
 ```bash
 ./docker-build.sh
-docker run -p 8080:8080 micronaut-graalvm-service
+docker run -p 8080:8080 micronaut-graalvm-greetService
 ```
